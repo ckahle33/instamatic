@@ -1,0 +1,21 @@
+body {
+  padding-top: 50px;
+}
+
+.image_card {
+  width: 200px;
+  float: left;
+}
+
+.figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 228px;
+}
+
+.thumbnails img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}

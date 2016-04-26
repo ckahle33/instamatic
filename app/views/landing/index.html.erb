@@ -1,11 +1,17 @@
-<% if current_user %>
-  Herro!! <%= current_user.name %>
-<% else %>
-  Please log in to see content
-<% end %>
+<div class="jumbotron">
 
-<% if current_user %>
-  <%= link_to "Logout", logout_path %>
-<% else %>
-  <%= link_to "Log in with Instagram", auth_instagram_path %>
-<% end %>
+  <h4>welcome to instamatic</h4>
+
+  <% if current_user %>
+    Herro!! <%= current_user.name %>
+  <% else %>
+    Please log in to see content
+  <% end %>
+
+  <% if current_user %>
+    <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to "Log in with Instagram", auth_instagram_path %>
+  <% end %>
+
+</div>

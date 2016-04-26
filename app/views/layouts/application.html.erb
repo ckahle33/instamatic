@@ -7,15 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
   <% end %>
   
-  <div class="container">
+  <header class="navbar navbar-default navbar-fixed-top">
     <%= render 'layouts/menu' %>
-  </div>
+  </header>
 
   <div class="container">
+    <%= session['access_token'].inspect %>
     <%= yield %>
   </div>
 

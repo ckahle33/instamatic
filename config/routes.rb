@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'landing#index', :controller => 'landing'
+  get '/dashboard', to: 'dashboard#index', :controller => 'dashboard'
+  get '/feed', to: 'feed#index', :controller => 'feed'
   get '/auth/instagram'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
